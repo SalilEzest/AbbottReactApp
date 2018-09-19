@@ -5,7 +5,7 @@ import {View, Container, Text, Header, Content, Form, Item, Input, Button, Label
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange'
+    backgroundColor: 'white'
   },
   button: {
     flex: 0.9,
