@@ -17,8 +17,9 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class FloatingLabelExample extends Component {
+export default class Login extends Component {
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <SafeAreaView style={styles.container}>
         <Container>
@@ -39,10 +40,15 @@ export default class FloatingLabelExample extends Component {
               </Item>
             </Form>
             <View padder style={styles.buttons}>
-              <Button rounded light style={styles.button}>
+              <Button
+                rounded
+                light
+                style={styles.button}
+                onPress={() =>
+                  navigate('Home', { name: 'Jane' })}>
                 <Text> Login </Text>
               </Button>
-              <Button rounded light>
+              <Button rounded light onPress>
                 <Text> Forgot Password </Text>
               </Button>
             </View>
