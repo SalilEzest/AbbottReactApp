@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {View, Container, Text, Header, Content, Form, Item, Input, Button, Label } from 'native-base';
-
+import {createStackNavigator} from 'react-navigation';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
 
 export default class Login extends Component {
   render() {
-    const {navigate} = this.props.navigation;
     return (
       <SafeAreaView style={styles.container}>
         <Container>
@@ -44,11 +43,10 @@ export default class Login extends Component {
                 rounded
                 light
                 style={styles.button}
-                onPress={() =>
-                  navigate('Home', { name: 'Jane' })}>
+                onPress={() => this.props.navigation.navigate('home')}>
                 <Text> Login </Text>
               </Button>
-              <Button rounded light onPress>
+              <Button rounded light>
                 <Text> Forgot Password </Text>
               </Button>
             </View>

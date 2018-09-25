@@ -11,15 +11,18 @@ import Login from './src/component/Login';
 import Home from './src/component/Home';
 import {createStackNavigator} from 'react-navigation';
 
-const navigation = createStackNavigator({
-  login: {screen: Login},
-  home: {screen: Home}
-});
+const RootStack = createStackNavigator({
+    login: {screen: Login},
+    home: {screen: Home},
+  },{
+    initialRouteName: 'login',
+  }
+);
 
 export default class App extends Component {
   render(){
     return(
-      <Login />
+      <RootStack />
     )
   }
 }
