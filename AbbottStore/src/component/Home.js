@@ -1,24 +1,140 @@
 import React,{ Component } from 'react';
-import { Container,Header, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
-
+import { Container,Header, Content, Footer, FooterTab, Button, Icon, Text, Card, CardItem, Right, Title } from 'native-base';
+import { createStackNavigator } from 'react-navigation'
 export default class Home extends Component {
+  static navigationOptions = {
+  title: 'Product List',
+  };
   render(){
+    const {navigate} = this.props.navigation;
     return(
       <Container>
-        <Content />
+        <Content>
+          <Card>
+              <CardItem button onPress={()=>navigate('overViewList')}>
+                <Icon active name="logo-googleplus"/>
+                <Text>Google Plus</Text>
+                <Right>
+                </Right>
+               </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+              <Icon active name="logo-googleplus" />
+              <Text>Google Plus</Text>
+              <Right>
+
+              </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+              <Icon active name="logo-googleplus" />
+              <Text>Google Plus</Text>
+              <Right>
+
+              </Right>
+             </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+              <Icon active name="logo-googleplus" />
+              <Text>Google Plus</Text>
+              <Right>
+
+              </Right>
+             </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+              <Icon active name="logo-googleplus" />
+              <Text>Google Plus</Text>
+              <Right>
+
+              </Right>
+             </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+            <Icon active name="logo-googleplus" />
+            <Text>Google Plus</Text>
+            <Right>
+
+            </Right>
+            </CardItem>
+          </Card>
+        </Content>
         <Footer>
           <FooterTab>
             <Button>
-              <Text>A</Text>
+              <Icon active name='apps'
+                    onPress={()=> navigate('overViewList')}/>
             </Button>
             <Button>
-              <Text>B</Text>
+            <Icon name="person"
+                  onPress={()=> navigate('productLists')}/>
             </Button>
             <Button>
-              <Text>C</Text>
+               <Icon name="navigate"
+               onPress={()=> navigate('overViewList')}/>
             </Button>
             <Button>
-              <Text>D</Text>
+              <Icon name='camera'
+              onPress={()=> navigate('productLists')}/>
             </Button>
           </FooterTab>
         </Footer>

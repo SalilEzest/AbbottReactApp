@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {View, Container, Text, Header, Content, Form, Item, Input, Button, Label } from 'native-base';
+import {View, Container, Text, Header, Content, Form, Item, Input, Button, Label, Title } from 'native-base';
 import {createStackNavigator} from 'react-navigation';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -18,15 +19,13 @@ const styles = StyleSheet.create({
 });
 
 export default class Login extends Component {
+  static navigationOptions = {
+    title: 'Login Page',
+  };
   render() {
     return (
       <SafeAreaView style={styles.container}>
         <Container>
-          <Header>
-            <Text>
-                Login Page
-            </Text>
-          </Header>
           <Content>
             <Form>
               <Item floatingLabel>
